@@ -10,8 +10,8 @@
 
 function memoize(fn) {
     const cache = {}
-    return function(...args){
-        if (cache[args]){
+    return function (...args) {
+        if (cache[args]) {
             return cache[args]
         }
 
@@ -22,7 +22,7 @@ function memoize(fn) {
     }
 }
 
-function slowFib(n) {
+function fib(n) {
     if (n < 2) {
         return n
     }
@@ -30,7 +30,7 @@ function slowFib(n) {
     return fib(n - 1) + fib(n - 2)
 }
 
-const fib = memoize(slowFib)
+fib = memoize(fib)
 
 // function fib(n) {
 //     let array = [0, 1]
