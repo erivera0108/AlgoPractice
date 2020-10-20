@@ -4,35 +4,30 @@
 // 'peek'.  Adding an element to the stack should
 // store it until it is removed.
 // --- Examples
-
-function test(){
-    const s = new Stack();
-    s.push(1);
-    debugger 
-    s.push(2);
-    // s.pop(); // returns 2
-    // s.pop(); // returns 1
-
-}
+// const s = new Stack();
+// s.push(1);
+// debugger
+// s.push(2);
+// s.pop(); // returns 2
+// s.pop(); // returns 1
 
 class Stack {
-    constructor(){
+    constructor() {
         this.data = []
     }
 
-    push(record){
+    push(record) {
         this.data.push(record)
     }
 
-    pop(){
+    pop() {
         return this.data.pop()
     }
 
-    peek(){
-       return this.data[this.data.length - 1]
+    peek() {
+        return this.data[this.data.length - 1]
     }
 }
 
-test()
 
 module.exports = Stack;
